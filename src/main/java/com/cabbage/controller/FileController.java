@@ -10,4 +10,9 @@ public class FileController {
     public String file(){
         return "/file/index";
     }
+
+    @RequestMapping(value = "/fileList")
+    public String fileList(){
+        return "/file/file_list";
+    }
 }

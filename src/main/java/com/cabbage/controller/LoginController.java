@@ -13,7 +13,7 @@ public class LoginController {
     }
 
     /** 系统登录界面 */
-    @RequestMapping("/login")
+    @RequestMapping("/")
     public String login(){
         return "/login";
     }

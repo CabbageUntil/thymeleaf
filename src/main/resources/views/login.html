@@ -11,15 +11,30 @@
     <!-- -->
     <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
     <link th:href="@{Bootstrap/login/css/style.css}" rel="stylesheet" type="text/css" media="all"/>
-    <script>var __links = document.querySelectorAll('a');function __linkClick(e) { parent.window.postMessage(this.href, '*');} ;for (var i = 0, l = __links.length; i < l; i++) {if ( __links[i].getAttribute('data-t') == '_blank' ) { __links[i].addEventListener('click', __linkClick, false);}}</script>
+    <script>
+        var __links = document.querySelectorAll('a');
+        function __linkClick(e) {
+            parent.window.postMessage(this.href, '*');
+        } ;
+        for (var i = 0, l = __links.length; i < l; i++) {
+            if ( __links[i].getAttribute('data-t') == '_blank' ) {
+                __links[i].addEventListener('click', __linkClick, false);
+            }
+        }
+    </script>
     <script th:src="@{Bootstrap/login/js/jquery.min.js}"></script>
-    <script>$(document).ready(function(c) {
-        $('.alert-close').on('click', function(c){
-            $('.message').fadeOut('slow', function(c){
-                $('.message').remove();
+    <script>
+        $(document).ready(function(c) {
+            $('.alert-close').on('click', function(c){
+                $('.message').fadeOut('slow', function(c){
+                    $('.message').remove();
+                });
             });
+            $("#LoginBtn").click(function () {
+                console.log("登陆按钮事件")
+                window.location.href="/main";
+            })
         });
-    });
     </script>
 </head>
 <body>
@@ -45,7 +60,7 @@
             </li>
             <div class="clear"> </div>
             <div class="submit">
-                <input type="submit" onclick="myFunction()" value="登录" >
+                <input type="button"  id="LoginBtn" value="登录" >
                 <h4><a href="#">忘记密码?</a></h4>
                 <div class="clear">  </div>
             </div>
@@ -57,7 +72,7 @@
 <div class="clear"> </div>
 <!--- footer --->
 <div class="footer">
-    <p>彭海杰 Copyright &copy; 2018.</p>
+    <p>penghaijie Copyright &copy; 2018.</p>
 </div>
 
 </body>
