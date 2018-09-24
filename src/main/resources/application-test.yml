@@ -1,0 +1,16 @@
+server:
+  port: 8080
+  tomcat:
+    uri-encoding: UTF-8
+  servlet:
+    session:
+      timeout: 10
+spring:
+  thymeleaf:
+    prefix: classpath:/views/
+    suffix: .html
+    mode: HTML5
+    encoding: UTF-8
+    servlet:
+      content-type: text/html
+    cache: false
